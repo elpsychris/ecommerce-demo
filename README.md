@@ -46,11 +46,12 @@ Connect to your VPC through SSH (assured that your VPC instance is running and p
 My VPC's information is:
 
 ```
-Instance type: EC2 t2.micro
-OS: Ubuntu 18.04
-Virtualization: hvm
-Inbound ports: 22, 3000
-Outbound ports: All
+**Instance type**: EC2 t2.micro
+**OS**: Ubuntu 18.04
+**Virtualization**: hvm
+_____Network Rules____
+**Inbound ports**: 22, 3000
+**Outbound ports**: All
 ```
 
 ```bash
@@ -62,7 +63,7 @@ Next, copy your project folder to the host's storage (I used Secure Copy for thi
 sudo scp -vr -i <path to pem file for VPC authentication> <path to project folder in your PC> ubuntu@<AWS VPC ip address>:~/
 ```
 
-'''ATTENTION:''' DO NOT COPY THE '''nodes_modules''' folders (NODEJS DEPENDENCIES FROM ''npm install'') IF YOU DO NOT WANT TO WAIT FOR TOO LONG
+**ATTENTION:** DO NOT COPY THE *nodes_modules* folders (NODEJS DEPENDENCIES FROM *npm install*) IF YOU DO NOT WANT TO WAIT FOR TOO LONG
 
 
 
