@@ -42,6 +42,11 @@ Install dependencies with this command:
 npm install
 ```
 
+If postscript did not work correctly (angular had not been installed), run this command mannually:
+```bash
+bower install
+```
+
 Run the application with this command:
 ```bash
 npm start
@@ -53,3 +58,6 @@ npm start
 * Express.js
 * Bootstrap
 * ui-Router
+
+## How to deploy this web on AWS VPC
+
