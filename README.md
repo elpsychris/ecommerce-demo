@@ -46,13 +46,18 @@ Connect to your VPC through SSH (assured that your VPC instance is running and p
 ### My VPC's information:
 
 **Instance type**: EC2 t2.micro
+
 **OS**: Ubuntu 18.04
+
 **Virtualization**: hvm
 
 ### Network rules
+
 **Inbound ports**: 22, 3000
+
 **Outbound ports**: All
 
+### Deployment steps
 
 ```bash
 ssh -i ~/Downloads/mykey2.pem ubuntu@<VPC IP address>
