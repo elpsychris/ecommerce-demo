@@ -43,16 +43,16 @@ npm start
 ## How to deploy this web on AWS VPC
 Connect to your VPC through SSH (assured that your VPC instance is running and port 22 is opening in your Security Group)
 
-My VPC's information is:
+###My VPC's information:
 
-```
 **Instance type**: EC2 t2.micro
 **OS**: Ubuntu 18.04
 **Virtualization**: hvm
-_____Network Rules____
+
+###Network rules
 **Inbound ports**: 22, 3000
 **Outbound ports**: All
-```
+
 
 ```bash
 ssh -i ~/Downloads/mykey2.pem ubuntu@<VPC IP address>
@@ -63,7 +63,17 @@ Next, copy your project folder to the host's storage (I used Secure Copy for thi
 sudo scp -vr -i <path to pem file for VPC authentication> <path to project folder in your PC> ubuntu@<AWS VPC ip address>:~/
 ```
 
-**ATTENTION:** DO NOT COPY THE *nodes_modules* folders (NODEJS DEPENDENCIES FROM *npm install*) IF YOU DO NOT WANT TO WAIT FOR TOO LONG
+**ATTENTION:** ```DO NOT COPY THE *nodes_modules* folders (NODEJS DEPENDENCIES FROM *npm install*) IF YOU DO NOT WANT TO WAIT FOR TOO LONG```
+
+Then, install MongoDB for the VPC and restore the data as the above instructions and done, you had the web run on your VPC
+
+Remember to run the *npm install* command as a deamon process with
+
+```bash
+nohup sudo npm start &
+```
+
+If not, the server will be closed immediately the second you close the ssh connection
 
 
 
