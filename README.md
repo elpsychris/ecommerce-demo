@@ -8,25 +8,6 @@ add them to their shopping cart
 ## Import Data
 I have included a data folder in this repo. Inside that folder will be 2 folders called cart and item. These 2 folders contain a mongodump of the 2 collections that I use in this ecommerce demo. You can use the [import-data.sh](data/import-data.sh) script to import these 2 dumps to an ecommerce database, then you will have the same content that I have for this demo.
 
-## Live Demonstration
-
-The E-commerce demo can be [viewed online here](https://jb-ecommerce-demo.herokuapp.com/).
-
-Here are screenshots that show the E-commerce demo application in use.
-
-**Home Page**
-![Home Page](/screenshots/homePage.png?raw=true "Optional Title")
-
----
-
-**Item Detail Page**
-![Item Detail](/screenshots/itemDetail.png?raw=true "Optional Title")
-
----
-
-**Shopping Cart**
-![Shopping Cart](/screenshots/shoppingCart.png?raw=true "Shopping Cart")
-
 ## Getting Started
 To get started  you can simply clone this `ecommerce-demo` repository and install the dependencies.
 
@@ -60,4 +41,29 @@ npm start
 * ui-Router
 
 ## How to deploy this web on AWS VPC
+Connect to your VPC through SSH (assured that your VPC instance is running and port 22 is opening in your Security Group)
+
+My VPC's information is:
+
+```
+Instance type: EC2 t2.micro
+OS: Ubuntu 18.04
+Virtualization: hvm
+Inbound ports: 22, 3000
+Outbound ports: All
+```
+
+```bash
+ssh -i ~/Downloads/mykey2.pem ubuntu@<VPC IP address>
+```
+Next, copy your project folder to the host's storage (I used Secure Copy for this task) and my project located in home directory in the VPC.
+
+```bash
+sudo scp -vr -i <path to pem file for VPC authentication> <path to project folder in your PC> ubuntu@<AWS VPC ip address>:~/
+```
+
+'''ATTENTION:''' DO NOT COPY THE '''nodes_modules''' folders (NODEJS DEPENDENCIES FROM ''npm install'') IF YOU DO NOT WANT TO WAIT FOR TOO LONG
+
+
+
 
