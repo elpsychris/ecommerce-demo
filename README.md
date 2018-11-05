@@ -7,6 +7,9 @@ add them to their shopping cart
 
 ## Import Data
 I have included a data folder in this repo. Inside that folder will be 2 folders called cart and item. These 2 folders contain a mongodump of the 2 collections that I use in this ecommerce demo. You can use the [import-data.sh](data/import-data.sh) script to import these 2 dumps to an ecommerce database, then you will have the same content that I have for this demo.
+```bash
+data/import-data.sh
+```
 
 ## Getting Started
 To get started  you can simply clone this `ecommerce-demo` repository and install the dependencies.
