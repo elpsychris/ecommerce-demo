@@ -80,6 +80,14 @@ nohup sudo npm start &
 
 If not, the server will be closed immediately the second you close the ssh connection
 
+Kill the server with the command 
+
+```bash
+fuser -k 3000/tcp
+```
+
+This command will kill any process running on port TCP 3000 (which is our web server)
+
 
 
 
