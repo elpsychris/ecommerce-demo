@@ -43,13 +43,13 @@ npm start
 ## How to deploy this web on AWS VPC
 Connect to your VPC through SSH (assured that your VPC instance is running and port 22 is opening in your Security Group)
 
-###My VPC's information:
+### My VPC's information:
 
 **Instance type**: EC2 t2.micro
 **OS**: Ubuntu 18.04
 **Virtualization**: hvm
 
-###Network rules
+### Network rules
 **Inbound ports**: 22, 3000
 **Outbound ports**: All
 
